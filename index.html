@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1e1e1e" />
+  <meta name="description" content="Himmanshu Sharma — Sr. Software Engineer building AI-powered, design-led web platforms with Angular & TypeScript." />
+  <title>himmanshu.sharma — Visual Studio Code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230098ff' d='M17 1.5l-2.5 2.5L5 13.5 1.5 11 0 12.5 5 17l12-12-1.5-1.5L17 1.5z'/%3E%3C/svg%3E" />
+</head>
+
+<body>
+  <!-- ===== Title Bar (menu) ===== -->
+  <header class="titlebar">
+    <div class="titlebar-left">
+      <div class="window-controls" aria-hidden="true">
+        <span class="wc wc-close"></span>
+        <span class="wc wc-min"></span>
+        <span class="wc wc-max"></span>
+      </div>
+      <nav class="menu" id="menu" aria-label="Application menu">
+        <button class="menu-item" data-menu="file">File</button>
+        <button class="menu-item" data-menu="edit">Edit</button>
+        <button class="menu-item" data-menu="selection">Selection</button>
+        <button class="menu-item" data-menu="view">View</button>
+        <button class="menu-item" data-menu="go">Go</button>
+        <button class="menu-item" data-menu="run">Run</button>
+        <button class="menu-item" data-menu="terminal">Terminal</button>
+        <button class="menu-item" data-menu="help">Help</button>
+      </nav>
+      <div class="menu-dropdown" id="menu-dropdown" role="menu" hidden></div>
+    </div>
+    <div class="titlebar-center">
+      <span class="search-bar">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path
+            d="M10.68 11.74a6 6 0 1 1 1.06-1.06l3.04 3.04a.75.75 0 0 1-1.06 1.06ZM11.5 7a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Z" />
+        </svg>
+        himmanshu.sharma
+      </span>
+    </div>
+    <div class="titlebar-right">
+      <button class="tb-icon" id="toggle-sidebar" aria-label="Toggle primary sidebar"
+        title="Toggle Primary Side Bar (Ctrl+B)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="16" rx="1.5" />
+          <line x1="9" y1="4" x2="9" y2="20" />
+          <rect x="3" y="4" width="6" height="16" fill="currentColor" opacity="0.45" stroke="none" />
+        </svg>
+      </button>
+      <button class="tb-icon" id="toggle-terminal" aria-label="Toggle terminal" title="Toggle Panel (Ctrl+`)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="16" rx="1.5" />
+          <line x1="3" y1="14" x2="21" y2="14" />
+          <rect x="3" y="14" width="18" height="6" fill="currentColor" opacity="0.45" stroke="none" />
+        </svg>
+      </button>
+      <button class="tb-icon" aria-label="Toggle secondary sidebar" title="Toggle Secondary Side Bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="16" rx="1.5" />
+          <line x1="15" y1="4" x2="15" y2="20" />
+          <rect x="15" y="4" width="6" height="16" fill="currentColor" opacity="0.45" stroke="none" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Main workbench ===== -->
+  <div class="workbench">
+    <!-- Activity bar -->
+    <aside class="activity-bar" aria-label="Activity bar">
+      <button class="ab-btn active" data-section="explorer" aria-label="Explorer" title="Explorer">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 6h6l2 2h10v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z" />
+        </svg>
+      </button>
+      <button class="ab-btn" aria-label="Search" title="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </button>
+      <button class="ab-btn" aria-label="Source control" title="Source control">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="6" cy="6" r="2.5" />
+          <circle cx="6" cy="18" r="2.5" />
+          <circle cx="18" cy="12" r="2.5" />
+          <path d="M6 8.5v7" />
+          <path d="M8.5 6h6a3 3 0 0 1 3 3v.5" />
+        </svg>
+      </button>
+      <button class="ab-btn" aria-label="Run and debug" title="Run">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="6 4 20 12 6 20 6 4" fill="currentColor" />
+        </svg>
+      </button>
+      <button class="ab-btn" aria-label="Extensions" title="Extensions">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="8" height="8" rx="1" />
+          <rect x="13" y="13" width="8" height="8" rx="1" />
+          <rect x="13" y="3" width="8" height="8" rx="1" />
+          <rect x="3" y="13" width="8" height="8" rx="1" />
+        </svg>
+      </button>
+      <div class="ab-spacer"></div>
+      <button class="ab-btn" aria-label="Accounts" title="Account">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4 4-7 8-7s8 3 8 7" />
+        </svg>
+      </button>
+      <button class="ab-btn" aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1A2 2 0 1 1 4.3 17l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+        </svg>
+      </button>
+    </aside>
+
+    <!-- Side bar (Explorer) -->
+    <aside class="sidebar" aria-label="Explorer">
+      <div class="sidebar-header">
+        <span>Explorer</span>
+        <button class="sb-icon" aria-label="More">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="5" cy="12" r="1.5" />
+            <circle cx="12" cy="12" r="1.5" />
+            <circle cx="19" cy="12" r="1.5" />
+          </svg>
+        </button>
+      </div>
+
+      <details open class="tree-group">
+        <summary class="tree-summary">
+          <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+            <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+          <span class="folder-name">HIMMANSHU-SHARMA</span>
+        </summary>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>about</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="readme"><span class="fi md"></span>README.md</button></li>
+            <li><button class="tree-file" data-tab="profile"><span class="fi json"></span>profile.json</button></li>
+            <li><button class="tree-file" data-tab="resume"><span class="fi md"></span>resume.md</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>experience</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="youtube"><span class="fi yml"></span>companies.yml</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>projects</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="platforms"><span class="fi tsx"></span>projects.tsx</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>skills</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="skills"><span class="fi md"></span>skills.md</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>other-projects</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="products"><span class="fi ts"></span>other-projects.ts</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">📁</span>
+            <span>connect</span>
+          </summary>
+          <ul class="tree-files">
+            <li><button class="tree-file" data-tab="connect"><span class="fi ts"></span>socials.ts</button></li>
+          </ul>
+        </details>
+
+        <details open class="tree-group nested">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+            <span class="folder-icon">🗂</span>
+            <span>assets</span>
+          </summary>
+          <ul class="tree-files">
+            <li>
+              <a class="tree-file" href="assets/HimmanshuSharmaResume.pdf" download="Himmanshu-Sharma-Resume.pdf" target="_blank" rel="noopener">
+                <span class="fi pdf"></span>resume.pdf
+              </a>
+            </li>
+          </ul>
+        </details>
+
+        <ul class="tree-files root-files">
+          <li><button class="tree-file" data-tab="license"><span class="fi md"></span>LICENSE.txt</button></li>
+          <li><button class="tree-file" data-tab="gitignore"><span class="fi git"></span>.gitignore</button></li>
+        </ul>
+      </details>
+
+      <div class="outline-panel">
+        <div class="outline-header">Outline</div>
+        <div class="outline-empty">No symbols found</div>
+      </div>
+
+      <div class="sidebar-avatar">
+          <img src="https://ik.imagekit.io/7bnay2uqa/Portfolio/Img.png" alt="Himmanshu Sharma" loading="lazy"/>
+          <!-- <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="Himmanshu Sharma" loading="lazy"/> -->
+        </div>
+    </aside>
+
+    <!-- Sidebar drag handle -->
+    <div class="sidebar-resizer" id="sidebar-resizer" role="separator" aria-label="Resize sidebar" title="Drag to resize"></div>
+
+    <!-- Editor area -->
+    <main class="editor" aria-label="Editor">
+      <div class="tabs" id="tabs" role="tablist">
+        <!-- Tabs injected by JS -->
+      </div>
+      <div class="breadcrumbs" id="breadcrumbs">
+        <span>HIMMANSHU-SHARMA</span>
+        <span class="bc-sep">›</span>
+        <span id="bc-folder">about</span>
+        <span class="bc-sep">›</span>
+        <span id="bc-file">README.md</span>
+      </div>
+
+      <div class="editor-body">
+        <div class="gutter" id="gutter" aria-hidden="true"></div>
+        <div class="content" id="content"></div>
+        <div class="minimap" aria-hidden="true"></div>
+      </div>
+
+      <!-- Bottom terminal panel -->
+      <aside class="panel" id="panel" hidden>
+        <div class="panel-resizer" id="panel-resizer" aria-label="Resize panel" title="Drag to resize"></div>
+        <header class="panel-head">
+          <div class="panel-tabs" id="panel-tabs">
+            <button class="panel-tab" data-panel="problems">PROBLEMS</button>
+            <button class="panel-tab" data-panel="output">OUTPUT</button>
+            <button class="panel-tab" data-panel="debug">DEBUG CONSOLE</button>
+            <button class="panel-tab active" data-panel="terminal">TERMINAL <span
+                class="panel-tab-count">1</span></button>
+            <button class="panel-tab" data-panel="ports">PORTS</button>
+          </div>
+          <div class="panel-actions">
+            <div class="panel-filter" id="panel-filter">
+              <input type="text" placeholder="Filter (e.g. text, **/*.ts, !**/node_modules/**)"
+                aria-label="Filter problems" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="3 4 21 4 14 12.5 14 21 10 18 10 12.5" />
+              </svg>
+            </div>
+            <button class="panel-icon" aria-label="Show as tree" title="Show as Tree">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="7" height="7" rx="1" />
+                <rect x="14" y="4" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </button>
+            <button class="panel-icon" aria-label="Collapse all" title="Collapse All">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <span class="panel-sep"></span>
+            <button class="panel-icon" aria-label="Maximize panel" title="Maximize Panel Size">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polyline points="4 9 4 4 9 4" />
+                <polyline points="20 9 20 4 15 4" />
+                <polyline points="4 15 4 20 9 20" />
+                <polyline points="20 15 20 20 15 20" />
+              </svg>
+            </button>
+            <button class="panel-icon" id="panel-close" aria-label="Close panel" title="Close Panel">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round">
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div class="panel-body">
+          <div class="terminal-view panel-pane is-active" data-panel="terminal" id="terminal-view"></div>
+          <div class="panel-pane panel-pane-empty" data-panel="problems">No problems have been detected in the
+            workspace.</div>
+          <div class="panel-pane panel-pane-empty" data-panel="output">No output to display.</div>
+          <div class="panel-pane panel-pane-empty" data-panel="debug">Debug console — start a debug session.</div>
+          <div class="panel-pane panel-pane-ports" data-panel="ports">
+            <p class="panel-empty-text">No forwarded ports. Forward a port to access your locally running services over
+              the internet.</p>
+            <button class="panel-cta-btn">Forward a Port</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- ===== Status bar ===== -->
+  <footer class="statusbar" aria-label="Status bar">
+    <div class="sb-left">
+      <span class="sb-item sb-branch">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="6" cy="6" r="2.5" />
+          <circle cx="6" cy="18" r="2.5" />
+          <circle cx="18" cy="12" r="2.5" />
+          <path d="M6 8.5v7" />
+          <path d="M8.5 6h6a3 3 0 0 1 3 3v.5" />
+        </svg>
+        main
+      </span>
+      <span class="sb-item sb-sync">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M21 12a9 9 0 1 1-3-6.7" />
+          <polyline points="21 3 21 9 15 9" />
+        </svg>
+        0 ↓ 0 ↑
+      </span>
+      <span class="sb-item sb-warn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12" y2="16" />
+        </svg>
+        <span id="sb-subs">70K+ users reached</span>
+      </span>
+      <span class="sb-item">
+        <span id="sb-videos">14+ projects shipped</span>
+      </span>
+    </div>
+    <div class="sb-right">
+      <span class="sb-item">Ln 1, Col 1</span>
+      <span class="sb-item">Spaces: 2</span>
+      <span class="sb-item">UTF-8</span>
+      <span class="sb-item">LF</span>
+      <span class="sb-item" id="sb-lang">Markdown</span>
+      <span class="sb-item sb-feedback">himmanshusharma45@gmail.com</span>
+    </div>
+  </footer>
+
+  <script src="skills.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
