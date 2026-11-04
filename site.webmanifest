@@ -1,0 +1,31 @@
+{
+  "name": "Himmanshu Sharma - Senior Software Engineer",
+  "short_name": "Himmanshu Sharma",
+  "description": "Portfolio of Himmanshu Sharma - Senior Software Engineer and AI Developer based in Gurugram, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e1e",
+  "theme_color": "#1e1e1e",
+  "lang": "en",
+  "categories": ["portfolio", "technology"],
+  "icons": [
+    {
+      "src": "/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

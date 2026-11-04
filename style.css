@@ -1,5 +1,5 @@
 /* =========================================================
-   Himmanshu Sharma — VS Code themed personal site
+   Himmanshu Sharma - VS Code themed personal site
    Palette: Dark+ / Monokai-ish accents
    ========================================================= */
 
@@ -32,21 +32,21 @@
 
   /* syntax */
   --kw: #c586c0;
-  /* purple — const/function/import */
+  /* purple - const/function/import */
   --kw2: #569cd6;
-  /* blue — class/interface */
+  /* blue - class/interface */
   --type: #4ec9b0;
-  /* teal — types */
+  /* teal - types */
   --fn: #dcdcaa;
-  /* yellow — functions */
+  /* yellow - functions */
   --str: #ce9178;
-  /* orange — strings */
+  /* orange - strings */
   --num: #b5cea8;
-  /* green — numbers */
+  /* green - numbers */
   --prop: #9cdcfe;
-  /* light-blue — props/identifiers */
+  /* light-blue - props/identifiers */
   --comment: #6a9955;
-  /* green-grey — comments */
+  /* green-grey - comments */
   --punct: #d4d4d4;
   --tag: #569cd6;
   --attr: #9cdcfe;
@@ -126,20 +126,31 @@ a.tk-link:hover,
   border-bottom: 1px solid var(--border);
   gap: 12px;
   user-select: none;
+  position: relative;
 }
 
-.titlebar-left,
-.titlebar-right {
+.titlebar-left {
   display: flex;
   align-items: center;
   gap: 4px;
   flex: 0 0 auto;
 }
 
+.titlebar-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
 .titlebar-center {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
+  pointer-events: auto;
 }
 
 .window-controls {
@@ -1371,7 +1382,7 @@ details:not([open])>.tree-summary .chev {
 }
 
 /* =========================================================
-   Connect (socials) — terminal style
+   Connect (socials) - terminal style
    ========================================================= */
 .terminal-block {
   background: #0c0c0c;
@@ -1912,7 +1923,64 @@ details:not([open])>.tree-summary .chev {
 }
 
 /* =========================================================
-   Agent Panel — VS Code-style AI Assistant (right side)
+   Mobile Banner
+   ========================================================= */
+.mobile-banner {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #1a3a5c;
+  border-bottom: 1px solid var(--statusbar);
+  color: #d4d4d4;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.mobile-banner.is-dismissed {
+  display: none !important;
+}
+
+.mobile-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mobile-banner-content svg {
+  flex-shrink: 0;
+  color: var(--statusbar);
+}
+
+.mobile-banner-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-banner-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  .mobile-banner:not(.is-dismissed) {
+    display: flex;
+  }
+}
+
+/* =========================================================
+   Agent Panel - VS Code-style AI Assistant (right side)
    ========================================================= */
 
 .workbench.agent-open {
@@ -2481,10 +2549,10 @@ details:not([open])>.tree-summary .chev {
 
   .agent-panel.is-open {
     position: fixed;
-    top: var(--titlebar-h);
+    top: 40px;
     right: 0;
-    bottom: var(--statusbar-h);
-    width: 100%;
+    bottom: 0;
+    width: 86%;
     z-index: 100;
     display: flex;
   }

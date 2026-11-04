@@ -1,4 +1,4 @@
-// Vercel serverless — Portfolio Assistant chat endpoint
+// Vercel serverless - Portfolio Assistant chat endpoint
 // Importers: Vercel routes api/portfolio-chat.js as POST /api/portfolio-chat
 // Callers: agent.js frontend via fetch("/api/portfolio-chat")
 // API: POST { message, history } → SSE stream data: {"text":"..."} ... data: [DONE]

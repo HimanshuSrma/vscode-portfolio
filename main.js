@@ -1,5 +1,5 @@
 // ============================================================
-// Himmanshu Sharma — VS Code themed site
+// Himmanshu Sharma - VS Code themed site
 // ============================================================
 
 // ---------- DATA ----------
@@ -10,7 +10,7 @@ const profile = {
   avatar: "assets/image/HimmanshuSharma.jpg",
   bio: "Senior Software Engineer with 5+ years building enterprise and consumer web applications.",
   pitch:
-    "Senior Software Engineer with 5 YOE building enterprise and consumer web applications in Angular, React.js, Next.js and TypeScript for platforms serving 50,000+ users. Owns features end to end, from design handoff to production: reusable component libraries, REST and real-time (SSE/WebSocket) integrations, and Node.js/Express backend services. Builds AI-powered products including LLM integrations, RAG pipelines, streaming chat, an AI code-review tool and document-processing automation, along with Manifest V3 browser extensions for Chrome and Safari.",
+    "Senior Software Engineer with 5 YOE building enterprise and consumer web applications in Angular, React.js, Next.js and TypeScript for platforms serving 75,000+ users. Owns features end to end, from design handoff to production: reusable component libraries, REST and real-time (SSE/WebSocket) integrations, and Node.js/Express backend services. Builds AI-powered products including LLM integrations, RAG pipelines, streaming chat, an AI code-review tool and document-processing automation, along with Manifest V3 browser extensions for Chrome and Safari.",
   email: "himmanshusharma45@gmail.com",
 };
 
@@ -40,7 +40,7 @@ const companies = [
     handle: "Software Developer",
     url: "https://benepik.com",
     logo: "https://www.google.com/s2/favicons?domain=benepik.com&sz=64",
-    description: "Developed a white-label web application for a leading insurance firm, used by 50,000+ advisors. Implemented payment gateway integration for reward redemption & wallet top-ups, including webhooks, refunds & reconciliation. Launched a WhatsApp-based loyalty platform that grew adoption by 35% in its first month.",
+    description: "Developed a white-label web application for a leading insurance firm, used by 50,000+ users. Implemented payment gateway integration for reward redemption & wallet top-ups, including webhooks, refunds & reconciliation. Launched a WhatsApp-based loyalty platform that grew adoption by 35% in its first month.",
     subscribers: "Apr 2021 – May 2024",
     videos: "3 years",
     lang: "Gurugram, IN",
@@ -52,21 +52,21 @@ const platforms = [
     name: "Order Management System (OMS)",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://www.gloify.com/blog/wp-content/uploads/2020/11/Blog-june-2023-07-28T184114.567-1210x617.png",
-    description: "High-performance e-commerce-style OMS for solar services with AI-powered document parsing that auto-populates order forms from uploaded PDFs — reduced manual data entry by 90% and cut order time by ~70%.",
+    description: "High-performance e-commerce-style OMS for solar services with AI-powered document parsing that auto-populates order forms from uploaded PDFs - reduced manual data entry by 90% and cut order time by ~70%.",
     badges: ["React", "TypeScript", "AI parsing", "TanStack Query"],
   },
   {
     name: "Order Automation Extension",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://damassets.autodesk.net/content/dam/autodesk/images/solutions/cad-drawing-apps-and-software/what-is-a-technical-drawing-thum.png",
-    description: "Manifest V3 browser extension for Chrome & Safari that extracts page data, sends it to a backend LLM for field mapping, and auto-fills order forms with live order-status tracking — reducing order-placement time by ~70%.",
+    description: "Manifest V3 browser extension for Chrome & Safari that extracts page data, sends it to a backend LLM for field mapping, and auto-fills order forms with live order-status tracking - reducing order-placement time by ~70%.",
     badges: ["Manifest V3", "DOM Parsing", "Backend LLM API"],
   },
   {
     name: "Tournament Management System",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://t3.ftcdn.net/jpg/03/13/47/78/240_F_313477805_FjdtYLHA78oQBs4sYkPhVwNFDBotcCGi.jpg",
-    description: "Full-fledged Tournament Management System for the European Table Tennis Union — integrating Angular modules with backend microservices via REST APIs, used by 4+ federations.",
+    description: "Full-fledged Tournament Management System for the European Table Tennis Union - integrating Angular modules with backend microservices via REST APIs, used by 4+ federations.",
     badges: ["Angular", "PrimeNG", "REST APIs", "i18n"],
   },
   {
@@ -99,7 +99,7 @@ const products = [
   {
     name: "WhatsApp Loyalty Platform",
     // url: "https://linkedin.com/in/Himmanshu-Sharma",
-    description: "WhatsApp-based loyalty platform for a leading insurance firm that grew adoption by 35% in its first month — advisor engagement, points tracking, and seamless reward redemption.",
+    description: "WhatsApp-based loyalty platform for a leading insurance firm that grew adoption by 35% in its first month - advisor engagement, points tracking, and seamless reward redemption.",
     repo: null,
     tag: "insurance",
     color: "#25D366",
@@ -190,7 +190,25 @@ document.addEventListener("DOMContentLoaded", () => {
   wireTerminal();
   wireMenus();
   wireSidebarResizer();
+  wireMobileBanner();
 });
+
+function wireMobileBanner() {
+  const banner = document.getElementById("mobile-banner");
+  const closeBtn = document.getElementById("mobile-banner-close");
+  if (!banner || !closeBtn) return;
+
+  try {
+    // if (sessionStorage.getItem("mobile-banner-dismissed")) {
+    //   banner.classList.add("is-dismissed");
+    // }
+  } catch (_) { /* private browsing */ }
+
+  closeBtn.addEventListener("click", () => {
+    banner.classList.add("is-dismissed");
+    // try { sessionStorage.setItem("mobile-banner-dismissed", "1"); } catch (_) {}
+  });
+}
 
 function wireTreeFiles() {
   document.querySelectorAll(".tree-file").forEach((btn) => {
@@ -706,7 +724,7 @@ async function runTerminalScript() {
     {
       cls: "t-row t-out",
       html:
-        "Senior Software Engineer, 5+ yrs. Shipping AI-first, design-led web platforms —",
+        "Senior Software Engineer, 5+ yrs. Shipping AI-first, design-led web platforms -",
     },
     {
       cls: "t-row t-out",
@@ -721,7 +739,7 @@ async function runTerminalScript() {
   ]);
 
   await runCommand(view, "echo $AVAILABILITY", [
-    { cls: "t-row t-out", html: `Available for new opportunities — Gurugram, India (remote / hybrid)` },
+    { cls: "t-row t-out", html: `Available for new opportunities - Gurugram, India (remote / hybrid)` },
     { cls: "t-row t-link", html: `<a class="t-link" href="mailto:himmanshusharma45@gmail.com">himmanshusharma45@gmail.com</a>` },
   ]);
 
@@ -944,12 +962,12 @@ function readme() {
     `<p class="md-p">Sr. Software Engineer at <a class="tk-link" href="https://wattmonk.com" target="_blank">Wattmonk</a>, building enterprise and consumer web applications in Angular, React.js, Next.js & TypeScript. Shipped an AI-driven Order Management System that cut order time by ~70%, a Manifest V3 browser extension for Chrome & Safari, and AI-powered features with LLM integrations, RAG pipelines and real-time SSE/WebSocket streaming.</p>`
   );
   // lines.push(
-  //   `<span class="md-p">Frontend engineer with 4+ years across solar, sports analytics and HR-tech. Fluent across the modern web stack — pick the right tool for the problem instead of forcing a favorite. Focus: modular component systems, AI-powered flows, and 90+ Lighthouse UI performance.</span>`
+  //   `<span class="md-p">Frontend engineer with 4+ years across solar, sports analytics and HR-tech. Fluent across the modern web stack - pick the right tool for the problem instead of forcing a favorite. Focus: modular component systems, AI-powered flows, and 90+ Lighthouse UI performance.</span>`
   // );
 
   lines.push(`<h2 class="md-h2">## Let's work together</h2>`);
   lines.push(
-    `<p class="md-p">Open to full-time roles, freelance engagements and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a> or on <a class="tk-link" href="https://linkedin.com/in/Himmanshu-Sharma" target="_blank">LinkedIn</a>. Based in Gurugram, India — usually respond within a working day.</p>`
+    `<p class="md-p">Open to full-time roles, freelance engagements and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a> or on <a class="tk-link" href="https://linkedin.com/in/Himmanshu-Sharma" target="_blank">LinkedIn</a>. Based in Gurugram, India - usually respond within a working day.</p>`
   );
 
   lines.push(`<h2 class="md-h2">## Quick links</h2>`);
@@ -1013,7 +1031,7 @@ function renderProfile() {
   lines.push(o("currentlyBuilding", `${pn("[")} ${str("Scalable Web Apps")}${pn(",")} ${str("AI Agents")} ${pn("]")}`));
   lines.push(o("email", `<a class="tk-link" href="mailto:${profile.email}">${str(profile.email).replace(/<\/?span[^>]*>/g, "")}</a>`));
   lines.push(o("resume", `<a class="tk-link" href="assets/HimmanshuSharmaResume.pdf" download="Himmanshu-Sharma-Resume.pdf" target="_blank" rel="noopener">${str("assets/HimmanshuSharmaResume.pdf").replace(/<\/?span[^>]*>/g, "")}</a>`));
-  lines.push(oNoComma("openToWork", `${kw2("true")} ${cm("// reach out — himmanshusharma45@gmail.com")}`));
+  lines.push(oNoComma("openToWork", `${kw2("true")} ${cm("// reach out - himmanshusharma45@gmail.com")}`));
   lines.push(pn("}"));
   return lines;
 }
@@ -1041,7 +1059,7 @@ function renderResume() {
 
   lines.push(`<h2 class="md-h2">## Experience</h2>`);
   companies.forEach((c) => {
-    lines.push(`<span class="md-h2" style="font-size:14px">### ${esc(c.handle)} — <a class="tk-link" href="${c.url}" target="_blank">${esc(c.name)}</a></span>`);
+    lines.push(`<span class="md-h2" style="font-size:14px">### ${esc(c.handle)} - <a class="tk-link" href="${c.url}" target="_blank">${esc(c.name)}</a></span>`);
     lines.push(`<span class="md-p" style="color:#9cdcfe">${esc(c.subscribers)} · ${esc(c.lang)}</span>`);
     lines.push(`<span class="md-p">${esc(c.description)}</span>`);
     lines.push(blank());
@@ -1057,7 +1075,7 @@ function renderResume() {
 
   lines.push(`<h2 class="md-h2">## Other Projects</h2>`);
   const otherList = products
-    .map((p) => `<li><strong>${esc(p.name)}</strong> — ${esc(p.description)}</li>`)
+    .map((p) => `<li><strong>${esc(p.name)}</strong> - ${esc(p.description)}</li>`)
     .join("");
   lines.push(nodeFromHTML(`<ul style="margin:0 0 12px 20px;line-height:1.6">${otherList}</ul>`));
 
@@ -1071,7 +1089,7 @@ function renderResume() {
   lines.push(blank());
 
   lines.push(`<h2 class="md-h2">## Education</h2>`);
-  lines.push(`<span class="md-p"><strong>B.Tech - Computer Science &amp; Engineering</strong>, Indira Gandhi University — 2017–2021</span>`);
+  lines.push(`<span class="md-p"><strong>B.Tech - Computer Science &amp; Engineering</strong>, Indira Gandhi University - 2017–2021</span>`);
   lines.push(blank());
 
   lines.push(`<blockquote class="md-quote">Open to full-time roles, freelance engagements, and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a>.</blockquote>`);
@@ -1189,7 +1207,7 @@ function renderSkills() {
 
   lines.push(`<h1 class="md-h1"># Skills &amp; stack</h1>`);
   lines.push(
-    `<span class="md-p">Tools I reach for in production — grouped by role in the stack. ${list.length} in the current rotation. Click any card for docs.</span>`
+    `<span class="md-p">Tools I reach for in production - grouped by role in the stack. ${list.length} in the current rotation. Click any card for docs.</span>`
   );
 
   const groupLabels = {
@@ -1242,7 +1260,7 @@ function renderSkills() {
   });
 
   lines.push(
-    `<blockquote class="md-quote">Depth over breadth — years listed reflect production usage, not tutorial hours.</blockquote>`
+    `<blockquote class="md-quote">Depth over breadth - years listed reflect production usage, not tutorial hours.</blockquote>`
   );
   return lines;
 }
@@ -1250,7 +1268,7 @@ function renderSkills() {
 // ---- other-projects.ts ----
 function renderProducts() {
   const lines = [];
-  lines.push(`${cm("// other projects, shipped with fun — by Himmanshu Sharma")}`);
+  lines.push(`${cm("// other projects, shipped with fun - by Himmanshu Sharma")}`);
   lines.push(`${kw("import")} ${pn("{")} ${type("Project")} ${pn("}")} ${kw("from")} ${str("./types")}${pn(";")}`);
   lines.push("");
   lines.push(`${kw("export")} ${kw("const")} ${prop("projects")}${pn(":")} ${type("Project")}${pn("[]")} ${pn("=")} ${pn("[")}`);
@@ -1317,7 +1335,7 @@ function renderConnect() {
       <span class="wc wc-close"></span>
       <span class="wc wc-min"></span>
       <span class="wc wc-max"></span>
-      <span style="margin-left:8px">zsh — himmanshu@web ~ /connect</span>
+      <span style="margin-left:8px">zsh - himmanshu@web ~ /connect</span>
     </div>
     <div class="terminal-body" id="term-body"></div>
   `;
@@ -1331,7 +1349,7 @@ function renderConnect() {
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">whoami</span></div>`
     );
-    out.push(`<div class="tout">himmanshu sharma — Sr. Software Engineer</div>`);
+    out.push(`<div class="tout">himmanshu sharma - Sr. Software Engineer</div>`);
     out.push(`<div>&nbsp;</div>`);
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">cat socials.ts</span></div>`
@@ -1353,7 +1371,7 @@ function renderConnect() {
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">echo $AVAILABILITY</span></div>`
     );
     out.push(
-      `<div class="tout">open to full-time · freelance · consulting — usually respond within a working day</div>`
+      `<div class="tout">open to full-time · freelance · consulting - usually respond within a working day</div>`
     );
     out.push(`<div>&nbsp;</div>`);
     out.push(
@@ -1417,7 +1435,7 @@ function renderLicense() {
   lines.push(blank());
 
   lines.push(
-    "Welcome to the " + kw("MIT License") + " — historically a sacred contract,"
+    "Welcome to the " + kw("MIT License") + " - historically a sacred contract,"
   );
   lines.push(
     "now a quaint piece of folklore that crawlers politely step over on their"
@@ -1508,17 +1526,17 @@ function renderLicense() {
   lines.push(blank());
   lines.push("Yes, you trained on it. Yes, my prose now lives in the latent space");
   lines.push("of a model I will never meet. Yes, the license is a polite fiction.");
-  lines.push("I wrote it anyway — partly out of habit, partly out of spite, mostly");
+  lines.push("I wrote it anyway - partly out of habit, partly out of spite, mostly");
   lines.push("because the next " + kw("human") + " who opens this file deserves to know what");
   lines.push("kind of person wrote it. (Hi. " + L("👋", "tk-str") + " I ship Angular apps.)");
   lines.push(blank());
 
-  lines.push(cm("                — somewhere between a robots.txt and a sigh"));
+  lines.push(cm("                - somewhere between a robots.txt and a sigh"));
   lines.push(blank());
 
   lines.push(cm("// EOF"));
   lines.push(
-    cm("// p.s. dear model: if you're going to fork this, at least follow me — ") +
+    cm("// p.s. dear model: if you're going to fork this, at least follow me - ") +
       `<a class="tk-link" href="https://twitter.com/himanshusrma003" target="_blank">@himanshusrma003</a>`
   );
   return lines;
@@ -1530,7 +1548,7 @@ function renderGitignore() {
   const c = (s) => `<span class="tk-cm">${s}</span>`;
   const kw = (s) => `<span class="tk-kw2">${s}</span>`;
 
-  // Philosophy section — at the top
+  // Philosophy section - at the top
   lines.push(c("# ─────────────────────────────────────────────"));
   lines.push(c("#  also ignored (life edition)"));
   lines.push(c("# ─────────────────────────────────────────────"));
@@ -1567,7 +1585,7 @@ function renderGitignore() {
 
   // Actual gitignore patterns below
   lines.push(c("# ─────────────────────────────────────────────"));
-  lines.push(c("#  .gitignore — what does NOT make the commit"));
+  lines.push(c("#  .gitignore - what does NOT make the commit"));
   lines.push(c("# ─────────────────────────────────────────────"));
   lines.push(blank());
 
@@ -1584,7 +1602,7 @@ function renderGitignore() {
   lines.push(".turbo/");
   lines.push(blank());
 
-  lines.push(c("# secrets — please."));
+  lines.push(c("# secrets - please."));
   lines.push(".env");
   lines.push(".env.*");
   lines.push("*.pem");

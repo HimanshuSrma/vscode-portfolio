@@ -1,5 +1,5 @@
 // ============================================================
-// Portfolio Assistant — VS Code-style AI Agent Panel
+// Portfolio Assistant - VS Code-style AI Agent Panel
 // Importers: index.html loads agentData.js then this file
 // Public: window.toggleAgentPanel, openAgentPanel, closeAgentPanel
 // API: POST /api/portfolio-chat { message, history } → SSE stream
@@ -11,10 +11,9 @@
   var D = window.AgentData;
   var AGENT_WIDTH = D.AGENT_WIDTH;
   var AUTO_OPEN_DELAY = D.AUTO_OPEN_DELAY;
-  var GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/" + D.GEMINI_MODEL + ":streamGenerateContent?alt=sse&key=" + D.GEMINI_API_KEY;
+  var CHAT_ENDPOINT = "/api/portfolio-chat";
   var MAX_MESSAGE_LENGTH = D.MAX_MESSAGE_LENGTH;
   var MAX_HISTORY = D.MAX_HISTORY;
-  var SYSTEM_PROMPT = D.SYSTEM_PROMPT;
   var SUGGESTIONS = D.SUGGESTIONS;
   var ALL_CACHED_ANSWERS = D.ALL_CACHED_ANSWERS;
   var FOLLOW_UPS = D.FOLLOW_UPS;
@@ -728,22 +727,17 @@
     renderMessage("assistant", "", { streaming: true });
 
     var history = state.messages.slice(0, -1).map(function (m) {
-      return { role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] };
+      return { role: m.role === "assistant" ? "model" : "user", content: m.content };
     });
 
-    var contents = history.slice(-MAX_HISTORY).concat([
-      { role: "user", parts: [{ text: userMessage }] },
-    ]);
-
     var requestBody = {
-      system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-      contents: contents,
-      generationConfig: { temperature: 0.7, topP: 0.9, maxOutputTokens: 1024 },
+      message: userMessage,
+      history: history.slice(-MAX_HISTORY),
     };
 
     state.abortController = new AbortController();
 
-    fetch(GEMINI_ENDPOINT, {
+    fetch(CHAT_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
@@ -752,9 +746,9 @@
       .then(function (res) {
         if (!res.ok) {
           return res.json().then(function (data) {
-            var msg = (data && data.error && data.error.message) || "";
+            var msg = (data && data.error) || "";
             if (res.status === 503 || msg.toLowerCase().indexOf("high demand") !== -1) {
-              finishStreaming("I'm currently experiencing high demand. This is usually temporary — please try again in a moment.");
+              finishStreaming("I'm currently experiencing high demand. This is usually temporary - please try again in a moment.");
             } else if (res.status === 429) {
               finishStreaming("I've hit my rate limit. Please wait a minute and try again.");
             } else {
@@ -793,20 +787,19 @@
           if (!line || !line.startsWith("data: ")) continue;
           var data = line.slice(6);
 
+          if (data === "[DONE]") {
+            finishStreaming(accumulated);
+            return;
+          }
+
           try {
             var parsed = JSON.parse(data);
-            if (parsed.candidates && parsed.candidates[0] &&
-              parsed.candidates[0].content && parsed.candidates[0].content.parts) {
-              var parts = parsed.candidates[0].content.parts;
-              for (var j = 0; j < parts.length; j++) {
-                if (parts[j].text) {
-                  accumulated += parts[j].text;
-                  updateStreamingBubble(accumulated);
-                }
-              }
+            if (parsed.text) {
+              accumulated += parsed.text;
+              updateStreamingBubble(accumulated);
             }
             if (parsed.error) {
-              finishStreaming(parsed.error.message || "API error occurred.");
+              finishStreaming(parsed.error || "API error occurred.");
               return;
             }
           } catch (e) {

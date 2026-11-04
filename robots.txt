@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
+Allow: /assets/HimmanshuSharmaResume.pdf
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Allow: /assets/HimmanshuSharmaResume.pdf
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
 
 Sitemap: https://himanshusharma.dev/sitemap.xml
-
