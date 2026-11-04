@@ -8,52 +8,42 @@ const profile = {
   name: "Himmanshu Sharma",
   handle: "himmanshusharma",
   avatar: "assets/image/HimmanshuSharma.jpg",
-  bio: "Senior Software Engineer with 4+ years building AI-powered, design-led web platforms.",
+  bio: "Senior Software Engineer with 5+ years building enterprise and consumer web applications.",
   pitch:
-    "Sr. Software Engineer at Wattmonk. Passionate software engineer with experience across diverse industries — solar, sports analytics and HR-tech. Comfortable across the modern web stack and quick to adapt to whatever the problem needs. Proven track record delivering scalable solutions and enhancing user experiences through modular component systems, AI-powered flows, and 90+ Lighthouse UI performance.",
+    "Senior Software Engineer with 5 YOE building enterprise and consumer web applications in Angular, React.js, Next.js and TypeScript for platforms serving 50,000+ users. Owns features end to end, from design handoff to production: reusable component libraries, REST and real-time (SSE/WebSocket) integrations, and Node.js/Express backend services. Builds AI-powered products including LLM integrations, RAG pipelines, streaming chat, an AI code-review tool and document-processing automation, along with Manifest V3 browser extensions for Chrome and Safari.",
   email: "himmanshusharma45@gmail.com",
 };
 
 const companies = [
   {
-    name: "Wattmonk Technology Pvt. Ltd.",
-    handle: "Sr. Software Engineer",
+    name: "Wattmonk Technology",
+    handle: "Senior Software Engineer",
     url: "https://wattmonk.com",
     logo: "https://www.google.com/s2/favicons?domain=wattmonk.com&sz=64",
-    description: "Built an AI-powered Order Management System reducing ordering time by ~70%, and a browser-based Drafting Tool with DXF parsing + Google Maps alignment that replaced AutoCAD for the operations team.",
+    description: "Built an order management system with AI-powered document parsing reducing order time by 70%. Architected the Ensite Workspace browser extension (Manifest V3) for Chrome & Safari. Engineered AI-integrated product features in React & TypeScript with TanStack Query, Zustand, and live SSE/WebSocket streaming from Node.js/Express services. Integrated Google Maps API and built a DXF parser to automate site mapping from CAD files.",
     subscribers: "Nov 2024 – Present",
     videos: "Ongoing",
-    lang: "Gurugram, HR",
+    lang: "Gurugram, IN",
   },
   {
-    name: "Stupa Sports Analytics Pvt. Ltd.",
-    handle: "Angular Developer",
+    name: "Stupa Sports Analytics",
+    handle: "Software Developer",
     url: "https://stupaanalytics.com",
     logo: "https://www.google.com/s2/favicons?domain=stupaanalytics.com&sz=64",
-    description: "Developed a Tournament Management System for the European Table Tennis Union — player registration, invoicing, fixtures, PDF import/export, print, and multi-language support for 4+ national federations across Spain, Norway, Sweden, and Slovenia.",
+    description: "Built a tournament management system for the European Table Tennis Union, integrating Angular modules with backend microservices via REST APIs for registration, fixtures, orders and invoicing across 4 federations. Implemented multilingual (i18n) support and mobile-first design, optimizing performance during international tournaments.",
     subscribers: "May 2024 – Oct 2024",
     videos: "6 months",
-    lang: "Gurugram, HR",
+    lang: "Gurugram, IN",
   },
   {
     name: "Benepik Technology Pvt. Ltd.",
     handle: "Software Developer",
     url: "https://benepik.com",
     logo: "https://www.google.com/s2/favicons?domain=benepik.com&sz=64",
-    description: "Shipped a white-label web app used by 70,000+ insurance advisors — campaign management, TDS tracking, Refer & Earn, automated incentive tracking. Built a WhatsApp loyalty program for Max Life Insurance, an interview management portal, and an HR engagement + reward platform.",
-    subscribers: "Oct 2021 – May 2024",
-    videos: "2.5 years",
-    lang: "Gurugram, HR",
-  },
-  {
-    name: "Benepik Technology Pvt. Ltd.",
-    handle: "Software Developer — Intern",
-    url: "https://benepik.com",
-    logo: "https://www.google.com/s2/favicons?domain=benepik.com&sz=64",
-    description: "Designed and developed impact-driven web platforms — a COVID-19 tribute site honoring frontline contributions and an International Women's Day nomination & awards site.",
-    subscribers: "Apr 2021 – Sep 2021",
-    videos: "6 months",
-    lang: "Gurugram, HR",
+    description: "Developed a white-label web application for a leading insurance firm, used by 50,000+ advisors. Implemented payment gateway integration for reward redemption & wallet top-ups, including webhooks, refunds & reconciliation. Launched a WhatsApp-based loyalty platform that grew adoption by 35% in its first month.",
+    subscribers: "Apr 2021 – May 2024",
+    videos: "3 years",
+    lang: "Gurugram, IN",
   },
 ];
 
@@ -62,30 +52,54 @@ const platforms = [
     name: "Order Management System (OMS)",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://www.gloify.com/blog/wp-content/uploads/2020/11/Blog-june-2023-07-28T184114.567-1210x617.png",
-    description: "High-performance e-commerce-style OMS for solar services with AI-driven PDF parsing — reduced manual data entry by 90% and cut order time by ~70%.",
-    badges: ["Angular", "TypeScript", "AI parsing"],
+    description: "High-performance e-commerce-style OMS for solar services with AI-powered document parsing that auto-populates order forms from uploaded PDFs — reduced manual data entry by 90% and cut order time by ~70%.",
+    badges: ["React", "TypeScript", "AI parsing", "TanStack Query"],
   },
   {
-    name: "Custom Web-based Drafting Tool",
+    name: "Order Automation Extension",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://damassets.autodesk.net/content/dam/autodesk/images/solutions/cad-drawing-apps-and-software/what-is-a-technical-drawing-thum.png",
-    description: "Browser-based drafting tool replacing AutoCAD — DXF parsing with Google Maps alignment for precise house layout creation.",
-    badges: ["Angular", "DXF Parser", "Google Maps"],
+    description: "Manifest V3 browser extension for Chrome & Safari that extracts page data, sends it to a backend LLM for field mapping, and auto-fills order forms with live order-status tracking — reducing order-placement time by ~70%.",
+    badges: ["Manifest V3", "DOM Parsing", "Backend LLM API"],
   },
   {
     name: "Tournament Management System",
     url: "https://linkedin.com/in/Himmanshu-Sharma",
     logo: "https://t3.ftcdn.net/jpg/03/13/47/78/240_F_313477805_FjdtYLHA78oQBs4sYkPhVwNFDBotcCGi.jpg",
-    description: "Full-fledged Tournament Management System for the European Table Tennis Union — used by 4+ federations, supporting 10,000+ players.",
-    badges: ["Angular", "PrimeNG", "SCSS"],
+    description: "Full-fledged Tournament Management System for the European Table Tennis Union — integrating Angular modules with backend microservices via REST APIs, used by 4+ federations.",
+    badges: ["Angular", "PrimeNG", "REST APIs", "i18n"],
+  },
+  {
+    name: "AI Customer Support Agent",
+    url: "https://linkedin.com/in/Himmanshu-Sharma",
+    logo: "https://cdn-icons-png.flaticon.com/512/4712/4712139.png",
+    description: "LLM-powered agent that ingests support emails via the Gmail API, extracts issue context and queries backend business-logic APIs to auto-resolve in-scope requests, escalating out-of-scope tickets to human agents.",
+    badges: ["LLM API", "Gmail API", "REST APIs"],
+  },
+  {
+    name: "RAG Document Q&A",
+    url: "https://linkedin.com/in/Himmanshu-Sharma",
+    logo: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    description: "End-to-end RAG pipeline covering document ingestion, chunking, embedding generation, vector retrieval and LLM answer generation with retrieval evaluation, guardrails and source citations.",
+    badges: ["Embeddings", "Vector Retrieval", "LLM API"],
   },
 ];
 
 const products = [
   {
-    name: "WhatsApp Loyalty Program",
+    name: "Ensite Workspace Extension",
     // url: "https://linkedin.com/in/Himmanshu-Sharma",
-    description: "WhatsApp-based loyalty program for Max Life Insurance — advisor engagement, points tracking, and seamless reward redemption for 70,000+ users.",
+    description: "Manifest V3 browser extension for Chrome & Safari built from a single shared codebase, with a UAT pipeline using private Chrome Web Store listing, staged releases and config separation from production.",
+    repo: null,
+    tag: "browser-ext",
+    color: "#4285F4",
+    glyph: "🧩",
+    stack: ["Manifest V3", "React", "TypeScript"],
+  },
+  {
+    name: "WhatsApp Loyalty Platform",
+    // url: "https://linkedin.com/in/Himmanshu-Sharma",
+    description: "WhatsApp-based loyalty platform for a leading insurance firm that grew adoption by 35% in its first month — advisor engagement, points tracking, and seamless reward redemption.",
     repo: null,
     tag: "insurance",
     color: "#25D366",
@@ -93,34 +107,24 @@ const products = [
     stack: ["Angular", "RxJS", "TypeScript"],
   },
   {
-    name: "HR Engagement Platform",
+    name: "Payment Gateway Integration",
     // url: "https://linkedin.com/in/Himmanshu-Sharma",
-    description: "HR engagement and recognition platform driving employee motivation — reward workflows, dashboards, and real-time analytics.",
+    description: "End-to-end payment gateway integration for reward redemption & wallet top-ups, including webhooks, refunds & reconciliation for 50,000+ users.",
     repo: null,
-    tag: "hr-tech",
+    tag: "fintech",
     color: "#7c3aed",
-    glyph: "★",
-    stack: ["Angular", "TypeScript", "SCSS"],
+    glyph: "💳",
+    stack: ["Angular", "TypeScript", "REST APIs"],
   },
   {
-    name: "Assessment Portal",
+    name: "Web-based Drafting Tool",
     // url: "https://linkedin.com/in/Himmanshu-Sharma",
-    description: "Scalable interview and assessment management system with separate admin and candidate modules — scheduling, evaluation, real-time results.",
+    description: "Browser-based drafting tool that integrates Google Maps API and a custom DXF parser to extract site layouts from CAD files, automating site mapping and reducing manual drafting effort.",
     repo: null,
-    tag: "hire-tech",
+    tag: "cad-tool",
     color: "#0ea5e9",
-    glyph: "Q&A",
-    stack: ["Angular", "Angular Material", "RxJS"],
-  },
-  {
-    name: "COVID Tribute & Women's Day Awards",
-    // url: "https://linkedin.com/in/Himmanshu-Sharma",
-    description: "Web platforms honoring COVID-19 contributions and celebrating women on International Women's Day — nomination flows and awards showcase.",
-    repo: null,
-    tag: "social-impact",
-    color: "#f59e0b",
-    glyph: "❤",
-    stack: ["HTML", "CSS", "JavaScript", "jQuery"],
+    glyph: "📐",
+    stack: ["Angular", "DXF Parser", "Google Maps API"],
   },
 ];
 
@@ -702,7 +706,7 @@ async function runTerminalScript() {
     {
       cls: "t-row t-out",
       html:
-        "Senior Software Engineer, 4+ yrs. Shipping AI-first, design-led web platforms —",
+        "Senior Software Engineer, 5+ yrs. Shipping AI-first, design-led web platforms —",
     },
     {
       cls: "t-row t-out",
@@ -935,31 +939,31 @@ function readme() {
   //   </div>`;
   // lines.push(badgesHTML);
 
-  lines.push(`<span class="md-h2">## What I do</span>`);
+  lines.push(`<h2 class="md-h2">## What I do</h2>`);
   lines.push(
-    `<span class="md-p">Sr. Software Engineer at <a class="tk-link" href="https://wattmonk.com" target="_blank">Wattmonk</a>, building AI-powered, design-led web platforms. Shipped an AI-driven Order Management System that cut order time by ~70% and a browser-based Drafting Tool that replaced AutoCAD for the operations team.</span>`
+    `<p class="md-p">Sr. Software Engineer at <a class="tk-link" href="https://wattmonk.com" target="_blank">Wattmonk</a>, building enterprise and consumer web applications in Angular, React.js, Next.js & TypeScript. Shipped an AI-driven Order Management System that cut order time by ~70%, a Manifest V3 browser extension for Chrome & Safari, and AI-powered features with LLM integrations, RAG pipelines and real-time SSE/WebSocket streaming.</p>`
   );
   // lines.push(
   //   `<span class="md-p">Frontend engineer with 4+ years across solar, sports analytics and HR-tech. Fluent across the modern web stack — pick the right tool for the problem instead of forcing a favorite. Focus: modular component systems, AI-powered flows, and 90+ Lighthouse UI performance.</span>`
   // );
 
-  lines.push(`<span class="md-h2">## Let's work together</span>`);
+  lines.push(`<h2 class="md-h2">## Let's work together</h2>`);
   lines.push(
-    `<span class="md-p">Open to full-time roles, freelance engagements and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a> or on <a class="tk-link" href="https://linkedin.com/in/Himmanshu-Sharma" target="_blank">LinkedIn</a>. Based in Gurugram, India — usually respond within a working day.</span>`
+    `<p class="md-p">Open to full-time roles, freelance engagements and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a> or on <a class="tk-link" href="https://linkedin.com/in/Himmanshu-Sharma" target="_blank">LinkedIn</a>. Based in Gurugram, India — usually respond within a working day.</p>`
   );
 
-  lines.push(`<span class="md-h2">## Quick links</span>`);
+  lines.push(`<h2 class="md-h2">## Quick links</h2>`);
   lines.push(
-    `<span class="md-quote">Open the file tree on the left, or use <kbd style="background:#3c3c3c;border:1px solid #555;padding:1px 6px;border-radius:3px;font-size:11px">Ctrl/Cmd + P</kbd> to cycle through sections.</span>`
+    `<blockquote class="md-quote">Open the file tree on the left, or use <kbd style="background:#3c3c3c;border:1px solid #555;padding:1px 6px;border-radius:3px;font-size:11px">Ctrl/Cmd + P</kbd> to cycle through sections.</blockquote>`
   );
 
   // Quick-link cards
   const grid = document.createElement("div");
   grid.className = "card-grid";
   [
-    { title: "Experience", id: "youtube", desc: "4+ years across Wattmonk, Stupa, Benepik.", chip: "work" },
-    { title: "Featured Projects", id: "platforms", desc: "OMS, Drafting Tool, Tournament System.", chip: "projects" },
-    { title: "Other Products", id: "products", desc: "WhatsApp loyalty, HR platform, Assessment portal.", chip: "products" },
+    { title: "Experience", id: "youtube", desc: "5 years across Wattmonk, Stupa, Benepik.", chip: "work" },
+    { title: "Featured Projects", id: "platforms", desc: "OMS, Browser Extension, AI Agent, RAG Q&A.", chip: "projects" },
+    { title: "Other Products", id: "products", desc: "Ensite Extension, WhatsApp loyalty, Payment gateway.", chip: "products" },
     { title: "Get in touch", id: "connect", desc: "Email, LinkedIn, and more.", chip: "contact" },
   ].forEach((c) => {
     const card = nodeFromHTML(`
@@ -1027,15 +1031,15 @@ function renderResume() {
   `);
   lines.push(downloadBar);
 
-  lines.push(`<span class="md-h1"># ${esc(profile.name)}</span>`);
+  lines.push(`<h1 class="md-h1"># ${esc(profile.name)}</h1>`);
   lines.push(`<span class="md-p">Sr. Software Engineer · Gurugram, India · <a class="tk-link" href="mailto:${profile.email}">${esc(profile.email)}</a> · <a class="tk-link" href="https://linkedin.com/in/Himmanshu-Sharma" target="_blank">LinkedIn</a></span>`);
   lines.push(blank());
 
-  lines.push(`<span class="md-h2">## Summary</span>`);
+  lines.push(`<h2 class="md-h2">## Summary</h2>`);
   lines.push(`<span class="md-p">${esc(profile.pitch)}</span>`);
   lines.push(blank());
 
-  lines.push(`<span class="md-h2">## Experience</span>`);
+  lines.push(`<h2 class="md-h2">## Experience</h2>`);
   companies.forEach((c) => {
     lines.push(`<span class="md-h2" style="font-size:14px">### ${esc(c.handle)} — <a class="tk-link" href="${c.url}" target="_blank">${esc(c.name)}</a></span>`);
     lines.push(`<span class="md-p" style="color:#9cdcfe">${esc(c.subscribers)} · ${esc(c.lang)}</span>`);
@@ -1043,7 +1047,7 @@ function renderResume() {
     lines.push(blank());
   });
 
-  lines.push(`<span class="md-h2">## Highlighted Projects</span>`);
+  lines.push(`<h2 class="md-h2">## Highlighted Projects</h2>`);
   platforms.forEach((p) => {
     const badges = (p.badges || []).map((b) => `<span class="chip muted">${esc(b)}</span>`).join(" ");
     lines.push(`<span class="md-h2" style="font-size:14px">### ${esc(p.name)}</span>`);
@@ -1051,23 +1055,26 @@ function renderResume() {
     lines.push(nodeFromHTML(`<div style="margin:4px 0 12px 0">${badges}</div>`));
   });
 
-  lines.push(`<span class="md-h2">## Other Projects</span>`);
+  lines.push(`<h2 class="md-h2">## Other Projects</h2>`);
   const otherList = products
     .map((p) => `<li><strong>${esc(p.name)}</strong> — ${esc(p.description)}</li>`)
     .join("");
   lines.push(nodeFromHTML(`<ul style="margin:0 0 12px 20px;line-height:1.6">${otherList}</ul>`));
 
-  lines.push(`<span class="md-h2">## Skills</span>`);
-  const skillsList = (typeof portfolioSkills !== "undefined" && portfolioSkills) || [];
-  const skillNames = skillsList.map((s) => s.name).filter(Boolean);
-  const skillChips = skillNames.map((n) => `<span class="chip muted">${esc(n)}</span>`).join(" ");
-  lines.push(nodeFromHTML(`<div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px 0">${skillChips}</div>`));
-
-  lines.push(`<span class="md-h2">## Education</span>`);
-  lines.push(`<span class="md-p"><strong>B.Tech, Computer Science</strong> — 2017–2021</span>`);
+  lines.push(`<h2 class="md-h2">## Skills</h2>`);
+  lines.push(`<span class="md-p"><strong>Frontend:</strong> React.js, Angular, Next.js, TypeScript, JavaScript, RxJS, SCSS</span>`);
+  lines.push(`<span class="md-p"><strong>UI &amp; Visualization:</strong> Angular Material, PrimeNG, Tailwind CSS, Bootstrap, Shadcn UI, Highcharts, Chart.js</span>`);
+  lines.push(`<span class="md-p"><strong>State Management:</strong> TanStack Query, Zustand, Redux</span>`);
+  lines.push(`<span class="md-p"><strong>Backend &amp; APIs:</strong> Node.js, Express.js, REST APIs, SSE, WebSockets</span>`);
+  lines.push(`<span class="md-p"><strong>AI &amp; LLM:</strong> LLM/AI API Integration, Prompt Engineering, Streaming Responses, Embeddings, RAG, Vector Retrieval, Retrieval Evaluation, Guardrails &amp; Citations</span>`);
+  lines.push(`<span class="md-p"><strong>Cloud &amp; Platforms:</strong> AWS, Browser Extensions (Manifest V3 – Chrome &amp; Safari)</span>`);
   lines.push(blank());
 
-  lines.push(`<span class="md-quote">Open to full-time roles, freelance engagements, and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a>.</span>`);
+  lines.push(`<h2 class="md-h2">## Education</h2>`);
+  lines.push(`<span class="md-p"><strong>B.Tech - Computer Science &amp; Engineering</strong>, Indira Gandhi University — 2017–2021</span>`);
+  lines.push(blank());
+
+  lines.push(`<blockquote class="md-quote">Open to full-time roles, freelance engagements, and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a>.</blockquote>`);
 
   return lines;
 }
@@ -1075,7 +1082,7 @@ function renderResume() {
 // ---- companies.yml ----
 function renderYouTube() {
   const lines = [];
-  lines.push(`${cm("# 4+ years across solar, sports analytics and HR-tech.")}`);
+  lines.push(`${cm("# 5+ years across solar, sports analytics and HR-tech.")}`);
   lines.push(`${prop("companies")}${pn(":")}`);
   companies.forEach((c) => {
     lines.push(`${pn("  -")} ${prop("name")}${pn(":")} ${str(c.name)}`);
@@ -1180,23 +1187,25 @@ function renderSkills() {
   const list = (typeof portfolioSkills !== "undefined" && portfolioSkills) || [];
   const lines = [];
 
-  lines.push(`<span class="md-h1"># Skills &amp; stack</span>`);
+  lines.push(`<h1 class="md-h1"># Skills &amp; stack</h1>`);
   lines.push(
     `<span class="md-p">Tools I reach for in production — grouped by role in the stack. ${list.length} in the current rotation. Click any card for docs.</span>`
   );
 
   const groupLabels = {
-    frontend: "Frontend",
-    styling: "Styling",
-    backend: "Backend",
-    database: "Database",
+    frontend: "Frontend Development",
+    state: "State Management",
+    styling: "UI & Visualization",
+    ai: "AI & LLM",
+    backend: "Backend & APIs",
+    cloud: "Cloud & Platforms",
+    tools: "Tooling & Version Control",
     mobile: "Mobile / Hybrid",
-    tools: "Tooling",
-    cloud: "Cloud",
+    database: "Database",
     devops: "DevOps",
     other: "Other",
   };
-  const order = ["frontend", "styling", "backend", "database", "mobile", "tools", "cloud", "devops", "other"];
+  const order = ["ai", "frontend", "backend", "state", "styling", "cloud", "tools", "mobile", "database", "devops", "other"];
 
   const groups = list.reduce((acc, s) => {
     const key = s.tag && groupLabels[s.tag] ? s.tag : "other";
@@ -1206,7 +1215,7 @@ function renderSkills() {
 
   order.filter((k) => groups[k]).forEach((key) => {
     const items = groups[key];
-    lines.push(`<span class="md-h2">## ${groupLabels[key]} (${items.length})</span>`);
+    lines.push(`<h2 class="md-h2">## ${groupLabels[key]} (${items.length})</h2>`);
     const grid = document.createElement("div");
     grid.className = "card-grid";
     items.forEach((s) => {
@@ -1233,7 +1242,7 @@ function renderSkills() {
   });
 
   lines.push(
-    `<span class="md-quote">Depth over breadth — years listed reflect production usage, not tutorial hours.</span>`
+    `<blockquote class="md-quote">Depth over breadth — years listed reflect production usage, not tutorial hours.</blockquote>`
   );
   return lines;
 }
@@ -1451,14 +1460,14 @@ function renderLicense() {
     "EXPRESS, IMPLIED, OR HALLUCINATED. IN NO EVENT SHALL THE AUTHOR BE"
   ));
   lines.push(cm(
-    "LIABLE FOR ANY CLAIM, DAMAGES, OR EMBARRASSING ANSWER GIVEN BY A"
+    "LIABLE FOR ANY CLAIM, DAMAGES, OR EMBARRASSING ANSWER GIVEN BY A CHATBOT"
   ));
-  lines.push(cm(
-    "CHATBOT CONFIDENTLY ATTRIBUTING THIS CODE TO LINUS TORVALDS, A 14-"
-  ));
-  lines.push(cm(
-    "YEAR-OLD ON REDDIT, OR \"AN ANONYMOUS CONTRIBUTOR TO TENSORFLOW.\""
-  ));
+  // lines.push(cm(
+  //   "CHATBOT CONFIDENTLY ATTRIBUTING THIS CODE TO LINUS TORVALDS, A 14-"
+  // ));
+  // lines.push(cm(
+  //   "YEAR-OLD ON REDDIT, OR \"AN ANONYMOUS CONTRIBUTOR TO TENSORFLOW.\""
+  // ));
   lines.push(blank());
 
   lines.push(cm("// Section 4: Additional terms for our silicon friends ─────"));

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://himanshusharma.dev/sitemap.xml
+
