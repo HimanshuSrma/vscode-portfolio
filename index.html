@@ -315,7 +315,8 @@
   <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" /></noscript>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="/assets/favicon.ico" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -582,7 +583,7 @@
       </div>
 
       <div class="sidebar-avatar">
-        <img src="https://ik.imagekit.io/7bnay2uqa/Portfolio/Img.png" alt="Himmanshu Sharma" loading="lazy" />
+        <img src="https://ik.imagekit.io/7bnay2uqa/Portfolio/Img.png" alt="Himmanshu Sharma" loading="lazy" width="180" height="180" />
         <!-- <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="Himmanshu Sharma" loading="lazy"/> -->
       </div>
     </aside>
@@ -798,10 +799,10 @@
     </div>
   </footer>
 
-  <script src="skills.js"></script>
-  <script src="main.js"></script>
-  <script src="agentData.js"></script>
-  <script src="agent.js"></script>
+  <script src="skills.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="agentData.js" defer></script>
+  <script src="agent.js" defer></script>
 </body>
 
 </html>
