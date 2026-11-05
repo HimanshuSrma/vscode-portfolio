@@ -761,6 +761,7 @@ function renderTabs() {
     const btn = document.createElement("button");
     btn.className = "tab" + (t.id === activeTabId ? " active" : "");
     btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", t.id === activeTabId ? "true" : "false");
     btn.dataset.tab = t.id;
 
     const dot = document.createElement("span");
@@ -771,10 +772,12 @@ function renderTabs() {
     label.textContent = t.label;
     btn.appendChild(label);
 
-    const close = document.createElement("span");
+    const close = document.createElement("button");
     close.className = "tab-close";
+    close.setAttribute("aria-label", "Close " + t.label);
+    close.setAttribute("tabindex", "-1");
     close.innerHTML =
-      '<svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"/></svg>';
+      '<svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"/></svg>';
     btn.appendChild(close);
 
     btn.addEventListener("click", (e) => {

@@ -12,7 +12,7 @@
   --statusbar: #007acc;
   --statusbar-fg: #ffffff;
   --activity: #333333;
-  --activity-fg: #858585;
+  --activity-fg: #9e9e9e;
   --activity-fg-active: #ffffff;
   --sidebar: #252526;
   --editor: #1e1e1e;
@@ -515,7 +515,7 @@ details:not([open])>.tree-summary .chev {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 2px 8px 2px 30px;
+  padding: 6px 8px 6px 30px;
   font-size: 13px;
   color: #cccccc;
   border-radius: 0;
@@ -685,8 +685,8 @@ details:not([open])>.tree-summary .chev {
 }
 
 .tab .tab-close {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
