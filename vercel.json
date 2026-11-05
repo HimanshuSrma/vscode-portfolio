@@ -1,4 +1,6 @@
 {
+  "buildCommand": "",
+  "framework": null,
   "functions": {
     "api/portfolio-chat.js": {
       "maxDuration": 30
