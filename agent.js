@@ -82,13 +82,13 @@
       '</svg>' +
       '</div>' +
       '<p class="agent-welcome-title">Hi! I\'m your Portfolio Assistant.</p>' +
-      '<p class="agent-welcome-body">I can help you explore Himanshu\'s experience, technical skills, projects, and professional background.</p>' +
+      '<p class="agent-welcome-body">I can help you explore Himmanshu\'s experience, technical skills, projects, and professional background.</p>' +
       '<p class="agent-welcome-body">Ask me anything about his work.</p>' +
       '</div>' +
       '<div class="agent-suggestions" id="agent-suggestions"></div>' +
       '</div>' +
       '<div class="agent-input-area" id="agent-input-area">' +
-      '<textarea id="agent-input" class="agent-input" placeholder="Ask me about Himanshu Sharma" rows="1"></textarea>' +
+      '<textarea id="agent-input" class="agent-input" placeholder="Ask me about Himmanshu Sharma" rows="1"></textarea>' +
       '<button id="agent-send" class="agent-send" aria-label="Send message" title="Send">' +
       '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' +
       '</button>' +
@@ -354,7 +354,7 @@
         input.disabled = false;
         sendBtn.disabled = false;
         setStatus("", 0);
-        input.placeholder = "Ask me about Himanshu's experience, skills or projects...";
+        input.placeholder = "Ask me about Himmanshu's experience, skills or projects...";
         state.rateLimitTimer = null;
         var countdownEl = document.getElementById("agent-rate-countdown");
         if (countdownEl) countdownEl.textContent = "You can send messages again!";

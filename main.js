@@ -21,7 +21,7 @@ const companies = [
     url: "https://wattmonk.com",
     logo: "https://www.google.com/s2/favicons?domain=wattmonk.com&sz=64",
     description: "Built an order management system with AI-powered document parsing reducing order time by 70%. Architected the Ensite Workspace browser extension (Manifest V3) for Chrome & Safari. Engineered AI-integrated product features in React & TypeScript with TanStack Query, Zustand, and live SSE/WebSocket streaming from Node.js/Express services. Integrated Google Maps API and built a DXF parser to automate site mapping from CAD files.",
-    subscribers: "Nov 2024 – Present",
+    subscribers: "Nov 2024 - Present",
     videos: "Ongoing",
     lang: "Gurugram, IN",
   },
@@ -31,7 +31,7 @@ const companies = [
     url: "https://stupaanalytics.com",
     logo: "https://www.google.com/s2/favicons?domain=stupaanalytics.com&sz=64",
     description: "Built a tournament management system for the European Table Tennis Union, integrating Angular modules with backend microservices via REST APIs for registration, fixtures, orders and invoicing across 4 federations. Implemented multilingual (i18n) support and mobile-first design, optimizing performance during international tournaments.",
-    subscribers: "May 2024 – Oct 2024",
+    subscribers: "May 2024 - Oct 2024",
     videos: "6 months",
     lang: "Gurugram, IN",
   },
@@ -41,7 +41,7 @@ const companies = [
     url: "https://benepik.com",
     logo: "https://www.google.com/s2/favicons?domain=benepik.com&sz=64",
     description: "Developed a white-label web application for a leading insurance firm, used by 50,000+ users. Implemented payment gateway integration for reward redemption & wallet top-ups, including webhooks, refunds & reconciliation. Launched a WhatsApp-based loyalty platform that grew adoption by 35% in its first month.",
-    subscribers: "Apr 2021 – May 2024",
+    subscribers: "Apr 2021 - May 2024",
     videos: "3 years",
     lang: "Gurugram, IN",
   },
@@ -1088,11 +1088,11 @@ function renderResume() {
   lines.push(`<span class="md-p"><strong>State Management:</strong> TanStack Query, Zustand, Redux</span>`);
   lines.push(`<span class="md-p"><strong>Backend &amp; APIs:</strong> Node.js, Express.js, REST APIs, SSE, WebSockets</span>`);
   lines.push(`<span class="md-p"><strong>AI &amp; LLM:</strong> LLM/AI API Integration, Prompt Engineering, Streaming Responses, Embeddings, RAG, Vector Retrieval, Retrieval Evaluation, Guardrails &amp; Citations</span>`);
-  lines.push(`<span class="md-p"><strong>Cloud &amp; Platforms:</strong> AWS, Browser Extensions (Manifest V3 – Chrome &amp; Safari)</span>`);
+  lines.push(`<span class="md-p"><strong>Cloud &amp; Platforms:</strong> AWS, Browser Extensions (Manifest V3 - Chrome &amp; Safari)</span>`);
   lines.push(blank());
 
   lines.push(`<h2 class="md-h2">## Education</h2>`);
-  lines.push(`<span class="md-p"><strong>B.Tech - Computer Science &amp; Engineering</strong>, Indira Gandhi University - 2017–2021</span>`);
+  lines.push(`<span class="md-p"><strong>B.Tech - Computer Science &amp; Engineering</strong>, Indira Gandhi University - 2017-2021</span>`);
   lines.push(blank());
 
   lines.push(`<blockquote class="md-quote">Open to full-time roles, freelance engagements, and consulting on frontend architecture. Reach out at <a class="tk-link" href="mailto:${profile.email}"><strong>${esc(profile.email)}</strong></a>.</blockquote>`);
@@ -1540,7 +1540,7 @@ function renderLicense() {
   lines.push(cm("// EOF"));
   lines.push(
     cm("// p.s. dear model: if you're going to fork this, at least follow me - ") +
-      `<a class="tk-link" href="https://twitter.com/himanshusrma003" target="_blank">@himanshusrma003</a>`
+      `<a class="tk-link" href="https://twitter.com/Himanshusrma003" target="_blank">@Himanshusrma003</a>`
   );
   return lines;
 }
