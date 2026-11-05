@@ -41,7 +41,7 @@
     "2. PROFESSIONAL IDENTITY\n" +
     "==================================================\n\n" +
     "Name: Himanshu Sharma\n" +
-    "Professional Positioning: Senior AI Engineer & Full-Stack Developer\n" +
+    "Professional Positioning: Senior Software Engineer | GenAI & Full-Stack Developer\n" +
     "Current Resume Designation: Senior Software Engineer\n" +
     "Overall Experience: 5+ Years\n" +
     "Location: India\n" +
